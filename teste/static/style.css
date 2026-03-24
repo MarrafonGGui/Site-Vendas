@@ -1,0 +1,43 @@
+
+.btn-outline-danger{
+    margin-right: 5px; /* Adiciona espaço à direita */
+}
+
+.btn-outline-danger:hover {
+    color: black !important;   /* força a cor preta */
+    border-color: black !important; /* opcional: muda a borda para combinar */
+}
+
+.btn-outline-success{
+    margin-right: 5px; /* Adiciona espaço à direita */
+}
+
+.btn-outline-success:hover {
+    color: black !important;   /* força a cor preta */
+    border-color: black !important; /* opcional: muda a borda para combinar */
+}
+
+.ipt-cadastro{
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(53, 67, 80);
+    color: white
+}
+
+.sell-quest{
+    text-align: center;
+    font-size: 30px;
+    /* padding-left: 250px */
+}
+
+.venda{
+    text-align: center;
+    font-size: 50px;
+    color: linear-gradient(to right, #005f00, #47fa95);
+}
+
+.table-warning {
+    background-color: #ffc107;
+    color: #212529;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Flask</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark text-white text-center">
+
+    <div class="container mt-5">
+        <h1>Nova Venda</h1>
+
+        <form method="POST" class="sell-quest">
+            
+            <label class="sell-quest">Cliente:</label><br>
+            <select name="id_cliente" class="ipt-cadastro">
+                {% for c in clientes %}
+                    <option class="form-control ipt-cadastro" value="{{ c.id_cliente }}">{{ c.nome }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label class="sell-quest">Produto:</label><br>
+            <select name="id_produto" class="ipt-cadastro">
+                {% for p in produtos %}
+                    <option value="{{ p.id_produto }}">
+                        {{ p.nome_produto }} - R$ {{ p.preco }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <input type="number" class="ipt-cadastro" name="quantidade" placeholder="Quantidade" required>
+            <br><br>
+            <button class="btn btn-outline-success btn-lg"onclick="window.location.href='/vendas/efetuar'">
+                Salvar
+            </button>
+        </form>
+        <br><hr>
+        <button class="btn btn-outline-danger btn-lg"onclick="window.location.href='/'">
+            Home
+        </button>
+        <button class="btn btn-outline-danger btn-lg"onclick="window.location.href='/vendas'">
+            Voltar
+        </button>
+        <button class="btn btn-outline-danger btn-lg"onclick="window.location.href='/vendas/lista'">
+            Lista
+        </button>
+    </div>
+
+</body>
+</html>
